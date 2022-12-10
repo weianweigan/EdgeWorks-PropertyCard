@@ -1,0 +1,60 @@
+﻿<Window
+    x:Class="EdgeWorks.PropertyCard.UI.CardPageBuilder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:EdgeWorks.PropertyCard.UI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{x:Static local:Language.CardPageBuilder}"
+    Width="800"
+    Height="450"
+    d:DataContext="{d:DesignInstance Type=local:CardPageBuilderViewModel}"
+    ResizeMode="CanResizeWithGrip"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary Source="/EdgeWorks.PropertyCard.UI;component/Themes/Generic.xaml" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+            <RowDefinition Height="23" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Style="{StaticResource PropertyCard.RibbonBtn}" ToolTip="{x:Static local:Language.New}">
+                <Image Source="/EdgeWorks.PropertyCard.UI;component/Assets/Icons/new.png" />
+            </Button>
+            <Button Style="{StaticResource PropertyCard.RibbonBtn}" ToolTip="{x:Static local:Language.Open}">
+                <Image Source="/EdgeWorks.PropertyCard.UI;component/Assets/Icons/i_selectfolderpath_16.png" />
+            </Button>
+            <Button Style="{StaticResource PropertyCard.RibbonBtn}" ToolTip="{x:Static local:Language.Save}">
+                <Image Margin="2" Source="/EdgeWorks.PropertyCard.UI;component/Assets/Icons/i_exportsave_16.png" />
+            </Button>
+            <Button Style="{StaticResource PropertyCard.RibbonBtn}" ToolTip="{x:Static local:Language.Save_As}">
+                <Image Source="/EdgeWorks.PropertyCard.UI;component/Assets/Icons/saveas.png" />
+            </Button>
+        </StackPanel>
+        <Separator VerticalAlignment="Bottom" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <GroupBox Header="控件" Margin="0,0,2,0" >
+                <ListBox>
+                    
+                </ListBox>
+            </GroupBox>
+            <GridSplitter Width="2" />
+            <GroupBox Grid.Column="1" Header="模板" Margin="0,0,2,0"/>
+            <GridSplitter Width="2" />
+            <GroupBox Grid.Column="2" Header="模板属性" />
+        </Grid>
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock Text="Card Builder" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

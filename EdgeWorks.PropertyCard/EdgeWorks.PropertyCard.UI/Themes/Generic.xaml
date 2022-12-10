@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/EdgeWorks.PropertyCard.UI;component/Themes/Colors.xaml" />
+        <ResourceDictionary Source="/EdgeWorks.PropertyCard.UI;component/Themes/Buttons.xaml" />
+        <ResourceDictionary Source="/EdgeWorks.PropertyCard.UI;component/Themes/SldGroupBox.xaml" />
+        <ResourceDictionary Source="/EdgeWorks.PropertyCard.UI;component/Themes/taskpane_resourcedictionary.xaml" />
+        <ResourceDictionary Source="/EdgeWorks.PropertyCard.UI;component/Themes/PropertyItemSelector.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

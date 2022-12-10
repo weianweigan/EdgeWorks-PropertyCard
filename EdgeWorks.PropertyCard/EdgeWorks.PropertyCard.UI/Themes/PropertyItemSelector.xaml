@@ -1,0 +1,64 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EdgeWorks.PropertyCard.UI"
+    xmlns:pi="clr-namespace:EdgeWorks.PropertyCard.UI.PropertyItem">
+    <local:PropertyTemplateSelector x:Key="PropertyCard.PropertySelector">
+        <local:PropertyTemplateSelector.BoolDataTemplate>
+            <DataTemplate DataType="{x:Type pi:BoolPropertyItem}">
+                <CheckBox
+                    Margin="0,5"
+                    Content="{Binding Name}"
+                    IsChecked="{Binding Value}" />
+            </DataTemplate>
+        </local:PropertyTemplateSelector.BoolDataTemplate>
+        <local:PropertyTemplateSelector.StringDataTemplate>
+            <DataTemplate DataType="{x:Type pi:StringPropertyItem}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Name}" />
+                    <TextBox Text="{Binding Value}" />
+                </Grid>
+            </DataTemplate>
+        </local:PropertyTemplateSelector.StringDataTemplate>
+        <local:PropertyTemplateSelector.DoubleDataTemplate>
+            <DataTemplate DataType="{x:Type pi:DoublePropertyItem}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Name}" />
+                    <TextBox Text="{Binding Value}" />
+                </Grid>
+            </DataTemplate>
+        </local:PropertyTemplateSelector.DoubleDataTemplate>
+        <local:PropertyTemplateSelector.DropDownDataTemplate>
+            <DataTemplate DataType="{x:Type pi:DropDownPropertyItem}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Name}" />
+                    <ComboBox ItemsSource="{Binding DataItems}" SelectedItem="{Binding Value}" IsEditable="False"/>
+                </Grid>
+            </DataTemplate>
+        </local:PropertyTemplateSelector.DropDownDataTemplate>
+        <local:PropertyTemplateSelector.CheckListDataTemplate>
+            <DataTemplate DataType="{x:Type pi:CheckListPropetyItem}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{Binding Name}" />
+                    <ItemsControl ItemsSource="{Binding Value}"/>
+                </Grid>
+            </DataTemplate>
+        </local:PropertyTemplateSelector.CheckListDataTemplate>
+    </local:PropertyTemplateSelector>
+</ResourceDictionary>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SolidEdge": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Siemens\\Solid Edge 2022\\Program\\Edge.exe"
+    }
+  }
+}
