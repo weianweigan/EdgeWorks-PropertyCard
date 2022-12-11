@@ -79,6 +79,15 @@ namespace EdgeWorks.PropertyCard.UI {
         }
         
         /// <summary>
+        ///   查找类似 Create Now... 的本地化字符串。
+        /// </summary>
+        public static string GenerateNow {
+            get {
+                return ResourceManager.GetString("GenerateNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 More Properties 的本地化字符串。
         /// </summary>
         public static string MoreProperties {
@@ -97,11 +106,29 @@ namespace EdgeWorks.PropertyCard.UI {
         }
         
         /// <summary>
-        ///   查找类似 Open a exist page template 的本地化字符串。
+        ///   查找类似 A property page for part files was not found.Click &apos;Create now...&apos; to launch the Property Tab Builder.  If you already have a template, place it in the folder specified in Property Settings folder. Click refresh button to refresh the page. 的本地化字符串。
+        /// </summary>
+        public static string NoTemplateNow {
+            get {
+                return ResourceManager.GetString("NoTemplateNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Open a file to view its properties 的本地化字符串。
         /// </summary>
         public static string Open {
             get {
                 return ResourceManager.GetString("Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Open document to  view properties 的本地化字符串。
+        /// </summary>
+        public static string OpenFileToSeeProperty {
+            get {
+                return ResourceManager.GetString("OpenFileToSeeProperty", resourceCulture);
             }
         }
         

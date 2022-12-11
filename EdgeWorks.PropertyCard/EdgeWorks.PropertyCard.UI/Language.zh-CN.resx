@@ -144,4 +144,13 @@
   <data name="Settings" xml:space="preserve">
     <value>设置</value>
   </data>
+  <data name="OpenFileToSeeProperty" xml:space="preserve">
+    <value>打开文件以查看其属性</value>
+  </data>
+  <data name="NoTemplateNow" xml:space="preserve">
+    <value>没有找到零件文件的属性页。单机‘现在生成...’启动属性标签编制程序。如果您已有模板，将之放在属性设置中所指定的文件夹内 。点击刷新按钮刷新页面。</value>
+  </data>
+  <data name="GenerateNow" xml:space="preserve">
+    <value>现在生成...</value>
+  </data>
 </root>

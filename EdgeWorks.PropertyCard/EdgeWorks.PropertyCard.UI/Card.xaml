@@ -26,16 +26,21 @@
             <Button
                 Margin="0,0,10,0"
                 HorizontalAlignment="Right"
+                Command="{Binding ApplyCommand}"
                 Content="{x:Static local:Language.Apply}"
                 Style="{StaticResource PropertyCard.DefaultBtn}" />
             <Button
                 Grid.Column="1"
                 Margin="10,0,0,0"
                 HorizontalAlignment="Left"
+                Command="{Binding ReSetCommand}"
                 Content="{x:Static local:Language.Reset}"
                 Style="{StaticResource PropertyCard.DefaultBtn}" />
         </Grid>
-        <ItemsControl Grid.Row="1" ItemsSource="{Binding PropertyTemplate.Items}">
+        <ItemsControl
+            Grid.Row="1"
+            ItemsSource="{Binding PropertyTemplate.Items}"
+            Visibility="{Binding CardState, Converter={StaticResource PropertyCard.CardStateConverter}, ConverterParameter={x:Static local:CardState.Normal}}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <Expander Header="{Binding Name}" IsExpanded="{Binding IsExpanded}">
@@ -44,9 +49,9 @@
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1" Visibility="{Binding CardState, Converter={StaticResource PropertyCard.CardStateConverter}, ConverterParameter={x:Static local:CardState.NoTemplate}}">
             <Label Margin="5" Background="{StaticResource SldLabel}">
-                当前没有模板
+                <TextBlock Text="{x:Static local:Language.NoTemplateNow}" TextWrapping="Wrap" />
             </Label>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -58,17 +63,25 @@
                     Height="23"
                     Margin="0,0,5,0"
                     HorizontalAlignment="Right"
-                    Content="现在生成" />
+                    Command="{Binding CreateCommand}"
+                    Content="{x:Static local:Language.GenerateNow}" />
                 <Button
                     Grid.Column="1"
                     Width="23"
                     Height="23"
                     Margin="5,0,0,0"
-                    HorizontalAlignment="Left" >
-                    <Image Source="/EdgeWorks.PropertyCard.UI;component/Assets/Icons/refresh.png"/>
+                    HorizontalAlignment="Left"
+                    Command="{Binding RefreshCommand}">
+                    <Image Source="/EdgeWorks.PropertyCard.UI;component/Assets/Icons/refresh.png" />
                 </Button>
             </Grid>
         </StackPanel>
+        <StackPanel Grid.Row="1" Visibility="{Binding CardState, Converter={StaticResource PropertyCard.CardStateConverter}, ConverterParameter={x:Static local:CardState.NoDocument}}">
+            <Label Margin="5" Background="{StaticResource SldLabel}">
+                <TextBlock Text="{x:Static local:Language.OpenFileToSeeProperty}" TextWrapping="Wrap" />
+            </Label>
+        </StackPanel>
+
         <Grid Grid.Row="2" Background="#747888">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="6*" />
@@ -77,6 +90,7 @@
             <Button
                 Margin="0,0,10,0"
                 HorizontalAlignment="Right"
+                Command="{Binding MorePropertiesCommand}"
                 Content="{x:Static local:Language.MoreProperties}"
                 Style="{StaticResource PropertyCard.DefaultBtn}" />
             <Button
@@ -85,6 +99,7 @@
                 Height="23"
                 Margin="10,0,0,0"
                 HorizontalAlignment="Left"
+                Command="{Binding PropertySettingsCommand}"
                 ToolTip="{x:Static local:Language.Settings}">
                 <Image
                     Width="16"

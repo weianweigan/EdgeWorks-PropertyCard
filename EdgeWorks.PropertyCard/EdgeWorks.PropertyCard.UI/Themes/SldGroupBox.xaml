@@ -3,7 +3,7 @@
         <ResourceDictionary Source="./Colors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="{x:Type GroupBox}" x:Key="SldGroupBoxStyle">
+    <Style x:Key="SldGroupBoxStyle" TargetType="{x:Type GroupBox}">
         <Setter Property="BorderBrush" Value="{StaticResource SldDepthBackgroud}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="Padding" Value="0,7,0,0" />

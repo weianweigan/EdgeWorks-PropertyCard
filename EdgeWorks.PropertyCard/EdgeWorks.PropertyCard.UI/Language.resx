@@ -129,8 +129,14 @@
   <data name="New" xml:space="preserve">
     <value>Create a new page template</value>
   </data>
+  <data name="NoTemplateNow" xml:space="preserve">
+    <value>A property page for part files was not found.Click 'Create now...' to launch the Property Tab Builder.  If you already have a template, place it in the folder specified in Property Settings folder. Click refresh button to refresh the page.</value>
+  </data>
   <data name="Open" xml:space="preserve">
-    <value>Open a exist page template</value>
+    <value>Open a file to view its properties</value>
+  </data>
+  <data name="OpenFileToSeeProperty" xml:space="preserve">
+    <value>Open document to  view properties</value>
   </data>
   <data name="Reset" xml:space="preserve">
     <value>Reset</value>
@@ -143,5 +149,8 @@
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="GenerateNow" xml:space="preserve">
+    <value>Create Now...</value>
   </data>
 </root>

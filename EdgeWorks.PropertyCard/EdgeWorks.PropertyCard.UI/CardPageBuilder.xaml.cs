@@ -10,5 +10,8 @@ public partial class CardPageBuilder : Window
     public CardPageBuilder()
     {
         InitializeComponent();
+        DataContext = VM = new CardPageBuilderViewModel();
     }
+
+    public CardPageBuilderViewModel VM { get; }
 }
