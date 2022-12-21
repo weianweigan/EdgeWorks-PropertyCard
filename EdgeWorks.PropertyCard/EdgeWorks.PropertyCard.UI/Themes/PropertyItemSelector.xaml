@@ -65,16 +65,6 @@
                 </Grid>
             </DataTemplate>
         </local:PropertyTemplateSelector.CheckListDataTemplate>
-        <local:PropertyTemplateSelector.GroupDataTemplate>
-            <DataTemplate DataType="{x:Type pi:GroupPropertyItem}">
-                <Expander
-                    Header="{Binding Name}"
-                    IsEnabled="{Binding IsEnable}"
-                    IsExpanded="{Binding IsExpanded}">
-                    <ItemsControl ItemTemplateSelector="{StaticResource}" ItemsSource="{Binding Items}" />
-                </Expander>
-            </DataTemplate>
-        </local:PropertyTemplateSelector.GroupDataTemplate>
     </local:PropertyTemplateSelector>
     <local:PropertyTemplateSelector x:Key="PropertyCard.GroupPropertySelector">
         <local:PropertyTemplateSelector.GroupDataTemplate>
