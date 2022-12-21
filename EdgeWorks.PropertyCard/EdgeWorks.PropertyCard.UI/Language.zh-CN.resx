@@ -153,4 +153,16 @@
   <data name="GenerateNow" xml:space="preserve">
     <value>现在生成...</value>
   </data>
+  <data name="GroupBoxName" xml:space="preserve">
+    <value>组合框</value>
+  </data>
+  <data name="CheckBoxName" xml:space="preserve">
+    <value>是否</value>
+  </data>
+  <data name="TextBoxName" xml:space="preserve">
+    <value>文本框</value>
+  </data>
+  <data name="NumberBox" xml:space="preserve">
+    <value>数字框</value>
+  </data>
 </root>

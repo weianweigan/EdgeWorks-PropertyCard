@@ -9,7 +9,8 @@
                 <CheckBox
                     Margin="0,5"
                     Content="{Binding Name}"
-                    IsChecked="{Binding Value}" />
+                    IsChecked="{Binding Value}"
+                    IsEnabled="{Binding IsEnable}" />
             </DataTemplate>
         </local:PropertyTemplateSelector.BoolDataTemplate>
         <local:PropertyTemplateSelector.StringDataTemplate>
@@ -20,7 +21,7 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <TextBlock Text="{Binding Name}" />
-                    <TextBox Text="{Binding Value}" />
+                    <TextBox IsEnabled="{Binding IsEnable}" Text="{Binding Value}" />
                 </Grid>
             </DataTemplate>
         </local:PropertyTemplateSelector.StringDataTemplate>
@@ -32,7 +33,7 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <TextBlock Text="{Binding Name}" />
-                    <TextBox Text="{Binding Value}" />
+                    <TextBox IsEnabled="{Binding IsEnable}" Text="{Binding Value}" />
                 </Grid>
             </DataTemplate>
         </local:PropertyTemplateSelector.DoubleDataTemplate>
@@ -46,6 +47,7 @@
                     <TextBlock Text="{Binding Name}" />
                     <ComboBox
                         IsEditable="False"
+                        IsEnabled="{Binding IsEnable}"
                         ItemsSource="{Binding DataItems}"
                         SelectedItem="{Binding Value}" />
                 </Grid>
@@ -63,5 +65,27 @@
                 </Grid>
             </DataTemplate>
         </local:PropertyTemplateSelector.CheckListDataTemplate>
+        <local:PropertyTemplateSelector.GroupDataTemplate>
+            <DataTemplate DataType="{x:Type pi:GroupPropertyItem}">
+                <Expander
+                    Header="{Binding Name}"
+                    IsEnabled="{Binding IsEnable}"
+                    IsExpanded="{Binding IsExpanded}">
+                    <ItemsControl ItemTemplateSelector="{StaticResource}" ItemsSource="{Binding Items}" />
+                </Expander>
+            </DataTemplate>
+        </local:PropertyTemplateSelector.GroupDataTemplate>
+    </local:PropertyTemplateSelector>
+    <local:PropertyTemplateSelector x:Key="PropertyCard.GroupPropertySelector">
+        <local:PropertyTemplateSelector.GroupDataTemplate>
+            <DataTemplate DataType="{x:Type pi:GroupPropertyItem}">
+                <Expander
+                    Header="{Binding Name}"
+                    IsEnabled="{Binding IsEnable}"
+                    IsExpanded="{Binding IsExpanded}">
+                    <ItemsControl ItemTemplateSelector="{StaticResource PropertyCard.PropertySelector}" ItemsSource="{Binding Items}" />
+                </Expander>
+            </DataTemplate>
+        </local:PropertyTemplateSelector.GroupDataTemplate>
     </local:PropertyTemplateSelector>
 </ResourceDictionary>

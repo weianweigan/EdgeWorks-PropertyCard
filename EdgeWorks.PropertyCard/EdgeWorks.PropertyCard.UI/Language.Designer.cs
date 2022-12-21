@@ -79,11 +79,29 @@ namespace EdgeWorks.PropertyCard.UI {
         }
         
         /// <summary>
+        ///   查找类似 YesOrNo 的本地化字符串。
+        /// </summary>
+        public static string CheckBoxName {
+            get {
+                return ResourceManager.GetString("CheckBoxName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Create Now... 的本地化字符串。
         /// </summary>
         public static string GenerateNow {
             get {
                 return ResourceManager.GetString("GenerateNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 GroupBox 的本地化字符串。
+        /// </summary>
+        public static string GroupBoxName {
+            get {
+                return ResourceManager.GetString("GroupBoxName", resourceCulture);
             }
         }
         
@@ -111,6 +129,15 @@ namespace EdgeWorks.PropertyCard.UI {
         public static string NoTemplateNow {
             get {
                 return ResourceManager.GetString("NoTemplateNow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 NumberBox 的本地化字符串。
+        /// </summary>
+        public static string NumberBox {
+            get {
+                return ResourceManager.GetString("NumberBox", resourceCulture);
             }
         }
         
@@ -165,6 +192,15 @@ namespace EdgeWorks.PropertyCard.UI {
         public static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 TextBox 的本地化字符串。
+        /// </summary>
+        public static string TextBoxName {
+            get {
+                return ResourceManager.GetString("TextBoxName", resourceCulture);
             }
         }
     }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeWorks.PropertyCard.EdgeAddin", "EdgeWorks.PropertyCard.EdgeAddin\EdgeWorks.PropertyCard.EdgeAddin.csproj", "{E7F34E10-87C9-4B42-8A39-66E17951A242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdgeWorks.PropertyCard.EdgeAddin", "EdgeWorks.PropertyCard.EdgeAddin\EdgeWorks.PropertyCard.EdgeAddin.csproj", "{E7F34E10-87C9-4B42-8A39-66E17951A242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeWorks.PropertyCard.UI", "EdgeWorks.PropertyCard.UI\EdgeWorks.PropertyCard.UI.csproj", "{C8E66F43-0DE2-4F79-8F28-2F73998EAC0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdgeWorks.PropertyCard.UI", "EdgeWorks.PropertyCard.UI\EdgeWorks.PropertyCard.UI.csproj", "{C8E66F43-0DE2-4F79-8F28-2F73998EAC0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeWorks.PropertyCard.StandAlone", "EdgeWorks.PropertyCard.StandAlone\EdgeWorks.PropertyCard.StandAlone.csproj", "{57F0B286-53C3-47B2-A930-785ECF3C807C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C8E66F43-0DE2-4F79-8F28-2F73998EAC0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E66F43-0DE2-4F79-8F28-2F73998EAC0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E66F43-0DE2-4F79-8F28-2F73998EAC0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F0B286-53C3-47B2-A930-785ECF3C807C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F0B286-53C3-47B2-A930-785ECF3C807C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F0B286-53C3-47B2-A930-785ECF3C807C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F0B286-53C3-47B2-A930-785ECF3C807C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

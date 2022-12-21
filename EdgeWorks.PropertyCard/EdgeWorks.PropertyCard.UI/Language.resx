@@ -153,4 +153,16 @@
   <data name="GenerateNow" xml:space="preserve">
     <value>Create Now...</value>
   </data>
+  <data name="GroupBoxName" xml:space="preserve">
+    <value>GroupBox</value>
+  </data>
+  <data name="CheckBoxName" xml:space="preserve">
+    <value>YesOrNo</value>
+  </data>
+  <data name="TextBoxName" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+  <data name="NumberBox" xml:space="preserve">
+    <value>NumberBox</value>
+  </data>
 </root>

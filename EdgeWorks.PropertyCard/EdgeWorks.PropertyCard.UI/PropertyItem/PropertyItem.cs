@@ -8,6 +8,10 @@ public abstract class PropertyItem : ObservableObject
 
     public string? Name { get => _name; set => SetProperty(ref _name , value); }
 
+    public bool IsEnable { get; set; } = true;
+
+    public bool IsSelected { get; set; }
+
     public abstract PropertyItemType PropertyItemType { get; set; }
 }
 
